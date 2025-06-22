@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{208BA388-4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Domain.Tests", "tests\TaskFlow.Domain.Tests\TaskFlow.Domain.Tests.csproj", "{15180473-BE8C-4A78-9353-83D189AA5599}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Application", "src\TaskFlow.Application\TaskFlow.Application.csproj", "{1DEED988-C3BE-4FC5-A1D1-185F1C990E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Application.Tests", "tests\TaskFlow.Application.Tests\TaskFlow.Application.Tests.csproj", "{01963D61-091A-4858-9917-75C22A4AB45C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{15180473-BE8C-4A78-9353-83D189AA5599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15180473-BE8C-4A78-9353-83D189AA5599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15180473-BE8C-4A78-9353-83D189AA5599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01963D61-091A-4858-9917-75C22A4AB45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01963D61-091A-4858-9917-75C22A4AB45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01963D61-091A-4858-9917-75C22A4AB45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01963D61-091A-4858-9917-75C22A4AB45C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{16C7F614-7817-4916-A97D-43DDC96FFAB6} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
 		{15180473-BE8C-4A78-9353-83D189AA5599} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
+		{01963D61-091A-4858-9917-75C22A4AB45C} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal
