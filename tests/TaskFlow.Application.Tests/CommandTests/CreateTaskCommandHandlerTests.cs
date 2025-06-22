@@ -4,7 +4,7 @@ using TaskFlow.Application.Commands.CreateTaskCommand;
 using TaskFlow.Application.Interfaces;
 using TaskFlow.Domain.TaskAggregate;
 
-namespace TaskFlow.Application.Tests;
+namespace TaskFlow.Application.Tests.CommandTests;
 
 [TestClass]
 public class CreateTaskCommandHandlerTests

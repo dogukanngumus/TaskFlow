@@ -1,4 +1,3 @@
-using System;
 using TaskFlow.Application.Dispatchers;
 using TaskFlow.Application.Interfaces;
 
@@ -13,7 +12,7 @@ public sealed class UpdateTaskCommandHandler : ICommandHandler<UpdateTaskCommand
         _repository = repository;
     }
     public async Task<bool> Handle(UpdateTaskCommand command, CancellationToken cancellationToken = default)
-    {
+    {        
         var task = await _repository.GetByIdAsync(command.TaskId, cancellationToken);
         if (task == null)
         {

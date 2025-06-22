@@ -1,38 +1,37 @@
+using Microsoft.Extensions.DependencyInjection;
+using TaskFlow.Application.Behaviours;
+
 namespace TaskFlow.Application.Dispatchers;
 
 public class CommandDispatcher : ICommandDispatcher
 {
-     private readonly IServiceProvider _serviceProvider;
+    private readonly IServiceProvider _serviceProvider;
 
     public CommandDispatcher(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
     }
+
     public async Task<TResult> Dispatch<TResult>(ICommand<TResult> command, CancellationToken cancellationToken = default)
     {
         var handlerType = typeof(ICommandHandler<,>).MakeGenericType(command.GetType(), typeof(TResult));
-
-        dynamic? handler = _serviceProvider.GetService(handlerType);
+        dynamic handler = _serviceProvider.GetService(handlerType);
 
         if (handler == null)
-        {
             throw new InvalidOperationException($"Handler for command {command.GetType().Name} not found.");
-        }
 
-        return await handler.Handle((dynamic)command, cancellationToken);
-    }
+        var behaviors = _serviceProvider.GetServices(typeof(IPipelineBehavior<,>)
+            .MakeGenericType(command.GetType(), typeof(TResult)))
+            .Cast<dynamic>()
+            .ToList();
 
-    public async Task Dispatch(ICommand command, CancellationToken cancellationToken = default)
-    {
-        var handlerType = typeof(ICommandHandler<>).MakeGenericType(command.GetType());
+        RequestHandlerDelegate<TResult> handlerDelegate = () => handler.Handle((dynamic)command, cancellationToken);
 
-        dynamic? handler = _serviceProvider.GetService(handlerType);
-        
-        if (handler == null)
+        foreach (var behavior in behaviors.AsEnumerable().Reverse())
         {
-            throw new InvalidOperationException($"Handler for command {command.GetType().Name} not found.");
+            var next = handlerDelegate;
+            handlerDelegate = () => behavior.Handle((dynamic)command, cancellationToken, next);
         }
-
-        await handler.Handle((dynamic)command, cancellationToken);
+        return await handlerDelegate();
     }
 }

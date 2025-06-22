@@ -1,7 +1,6 @@
 using TaskFlow.Application.Dispatchers;
 using TaskFlow.Application.Interfaces;
 using TaskFlow.Domain.TaskAggregate;
-using TaskFlow.Domain.TaskAggregate.ValueObjects;
 
 namespace TaskFlow.Application.Commands.CreateTaskCommand;
 
@@ -16,14 +15,7 @@ public class CreateTaskCommandHandler : ICommandHandler<CreateTaskCommand, Guid>
 
     public async Task<Guid> Handle(CreateTaskCommand command, CancellationToken cancellationToken = default)
     {
-        var title = new Title(command.Title);
-
-        var task = TaskItem.Create(
-            title,
-            command.Description,
-            command.DueDate,
-            command.UserId
-        );
+        var task = TaskItem.Create(command.Title, command.Description, command.DueDate, command.UserId);
 
         await _repository.AddAsync(task, cancellationToken);
 
