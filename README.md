@@ -41,3 +41,4 @@ bir şablon sunma amacıyla oluşturulmuştur.
 
 - [🧠 Domain Modeli Tasarımı](/docs/domain-design.md)
 - [📐 Application Katmanı Tasarımı](/docs/application-design.md)
+- [🌐 Infrastructure ve API Katmanı Tasarımı](/docs/infrastructure-api-design.md)
