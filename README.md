@@ -40,3 +40,4 @@ bir şablon sunma amacıyla oluşturulmuştur.
 ## 📘 Ek Dokümantasyon
 
 - [🧠 Domain Modeli Tasarımı](/docs/domain-design.md)
+- [📐 Application Katmanı Tasarımı](/docs/domain-design.md)

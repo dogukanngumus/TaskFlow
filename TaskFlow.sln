@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{208BA388-4
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 		domain-design.md = domain-design.md
+		application-design.md = application-design.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Domain.Tests", "tests\TaskFlow.Domain.Tests\TaskFlow.Domain.Tests.csproj", "{15180473-BE8C-4A78-9353-83D189AA5599}"
@@ -20,6 +21,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Application", "src\TaskFlow.Application\TaskFlow.Application.csproj", "{1DEED988-C3BE-4FC5-A1D1-185F1C990E29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Application.Tests", "tests\TaskFlow.Application.Tests\TaskFlow.Application.Tests.csproj", "{01963D61-091A-4858-9917-75C22A4AB45C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Infrastructure", "src\TaskFlow.Infrastructure\TaskFlow.Infrastructure.csproj", "{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +46,10 @@ Global
 		{01963D61-091A-4858-9917-75C22A4AB45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01963D61-091A-4858-9917-75C22A4AB45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01963D61-091A-4858-9917-75C22A4AB45C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +59,6 @@ Global
 		{15180473-BE8C-4A78-9353-83D189AA5599} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
 		{01963D61-091A-4858-9917-75C22A4AB45C} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
 	EndGlobalSection
 EndGlobal
