@@ -22,7 +22,7 @@ public sealed class UpdateTaskCommandHandler : ICommandHandler<UpdateTaskCommand
         task.Update(command.Title, command.Description, command.DueDate);
 
         await _repository.UpdateAsync(task);
-        
+        await _repository.SaveChangesAsync(cancellationToken);
         return true;
     }
 }

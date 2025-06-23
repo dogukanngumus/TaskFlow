@@ -4,6 +4,11 @@ public class Title
 {
     public string Value { get; }
 
+    private Title()
+    {
+        
+    }
+
     public Title(string value)
     {
         if (string.IsNullOrWhiteSpace(value))

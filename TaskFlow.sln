@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Application.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Infrastructure", "src\TaskFlow.Infrastructure\TaskFlow.Infrastructure.csproj", "{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Infrastructure.Tests", "tests\TaskFlow.Infrastructure.Tests\TaskFlow.Infrastructure.Tests.csproj", "{4F075DBB-708B-46B9-A513-292419E786F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.API", "src\TaskFlow.API\TaskFlow.API.csproj", "{655D9A1A-6AA2-4677-A9DF-04F9057F2359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F075DBB-708B-46B9-A513-292419E786F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F075DBB-708B-46B9-A513-292419E786F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F075DBB-708B-46B9-A513-292419E786F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F075DBB-708B-46B9-A513-292419E786F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655D9A1A-6AA2-4677-A9DF-04F9057F2359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655D9A1A-6AA2-4677-A9DF-04F9057F2359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655D9A1A-6AA2-4677-A9DF-04F9057F2359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655D9A1A-6AA2-4677-A9DF-04F9057F2359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +72,7 @@ Global
 		{1DEED988-C3BE-4FC5-A1D1-185F1C990E29} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
 		{01963D61-091A-4858-9917-75C22A4AB45C} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{5A8D3845-9C2A-44A8-9AA0-83F874ADDC42} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
+		{4F075DBB-708B-46B9-A513-292419E786F4} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{655D9A1A-6AA2-4677-A9DF-04F9057F2359} = {51CD67E1-C831-405E-91FF-EFB23CBA3E39}
 	EndGlobalSection
 EndGlobal

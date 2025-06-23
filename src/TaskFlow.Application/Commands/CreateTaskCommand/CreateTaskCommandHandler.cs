@@ -18,7 +18,7 @@ public class CreateTaskCommandHandler : ICommandHandler<CreateTaskCommand, Guid>
         var task = TaskItem.Create(command.Title, command.Description, command.DueDate, command.UserId);
 
         await _repository.AddAsync(task, cancellationToken);
-
+        await _repository.SaveChangesAsync(cancellationToken);
         return task.Id;
     }
 }

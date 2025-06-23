@@ -22,6 +22,7 @@ public sealed class DeleteTaskCommandHandler : ICommandHandler<DeleteTaskCommand
         }
 
         await _repository.DeleteAsync(task, cancellationToken);
+        await _repository.SaveChangesAsync(cancellationToken);
         return true;
     }
 }

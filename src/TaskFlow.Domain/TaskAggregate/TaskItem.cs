@@ -12,6 +12,10 @@ public class TaskItem
     public DateTime DueDate { get; private set; }
     public Guid UserId { get; private set; }
 
+    private TaskItem() // For EF Core
+    {
+        
+    }    
     private TaskItem(Guid id, Title title, string description, DateTime dueDate, Guid userId)
     {
         if (dueDate < DateTime.UtcNow)
